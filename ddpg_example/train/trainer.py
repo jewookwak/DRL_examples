@@ -95,7 +95,7 @@ class DDPGTrainer:
             
 
             # 가중치 저장 조건
-            if episode_reward > self.reward_threshold:
+            if score_avg > self.reward_threshold:
                 self._save_weights(best=True)
             elif episode_reward > self.best_reward:
                 self.best_reward = episode_reward
